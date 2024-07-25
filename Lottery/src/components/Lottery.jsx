@@ -2,7 +2,7 @@ import { useState } from "react";
 import { generateTicket, sum } from "./Helper.js";
 import Ticket from "./Ticket.jsx";
 
-const Lottery = ({n = 3, winningSum = 15}) => {
+const Lottery = ({n = 3, winningSum}) => {
     let [ticket, setTicket] = useState([""]);
     let [sumNUM, setSumNUM] = useState(0)
     let [roll, setRoll] = useState(0)
@@ -12,7 +12,7 @@ const Lottery = ({n = 3, winningSum = 15}) => {
 
     // console.log(ticket)
 
-    let isWinning = sum(ticket) == winningSum;
+    let isWinning =  winningSum(ticket);
 
     const buyNewTicket = () => {
             setCost(cost += 200)

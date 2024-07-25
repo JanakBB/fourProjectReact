@@ -1,0 +1,8 @@
+.Title {
+    color: white;
+    font-weight: bold;
+    background-color: yellow;  
+    border: 2px solid blue;
+    margin: 5px;
+    border-radius: 5px;
+}
